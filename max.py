@@ -1,3 +1,9 @@
-a=[1,2,3,6]
-p=a.sort()
-print(p[-2])
+a=[1,2,6,7,3,4]
+first=second=a[0]
+for i in range(len(a)):
+    if(a[i] > first):
+        second=first
+        first=a[i]
+    elif(a[i] >secon and a[i]<first):
+        second
+print(second) 
