@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   body{
+    font-family: Arial,sans-serif;
+    text-align: center;
+   }
+   h1{
+    margin-bottom: 40px;
+    color: #333;
+   }
+   .box{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+   }
+     /* 1. Fade In*/
+     .fade-in{
+        animation: fadeIn 1s ease infinite;
+     }
+     @keyframes fadeIn{
+        0% { opacity: 0;}
+        100% { opacity: 1;}
+     }
+     /* 2. Slide In from Left*/
+      .slide-in{
+       animation: slideIn 1s ease forwards infinite;
+     }
+    @keyframes slideIn{
+        0%{transform: translateX(-200px);opacity: 0;}
+        100%{transform: translateX(0); opacity: 1;}
+    }
+    /* 3.Bounce*/
+    .bounce{
+        animation: bounce 1s ease infinite;
+    }
+    @keyframes bounce{
+        0%,100%{transform: translateY(0);}
+        100%{transform: translateY(-30px);}
+    }
+    /* 4. Rotate*/
+    .rotate{
+        animation: rotate 1s linear infinite;
+    }
+   @keyframes rotate{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(100deg);}
+    }
+    /* 5. scale-ip*/
+    .scale-up{
+        animation: scaleUp 1s ease-in-out infinite;
+    }
+    @keyframes scaleUp{
+        0%{transform:scale(0); opacity: 0;}
+        100%{ transform: scale(1); opacity: 1;}
+    }
+    .label{
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .block{
+        display: inline-block;     
+    }
+</style>
+</head>
+<body>
+    <h1>CSS Animation</h1>
+    <div class="block">
+        <div class="box fade-in"><img src="images/fade.jpg" height="100px" width="100px"></div>
+        <div class="label">Fade In</div>
+    </div>
+    <div class="block">
+    <div class="box slide-in"><img src="images/slide.jpg" height="100px" width="100px"></div>
+    <div class="label">Slide In</div>
+    </div>
+    <div class="block">
+        <div class="box bounce"><img src="images/bounce.jpg" height="100px" width="100px"></div>
+        <div class="label">Bounce</div>
+    </div>
+    <div class="block">
+        <div class="box rotate"><img src="images/fan.webp" height="100px" width="100px"></div>
+        <div class="label">Rotate</div>
+    </div>
+    <div class="block">
+        <div class="box scale-up"><img src="images/i1.jpg" height="100px" width="100px"></div>
+        <div class="label">scale Up</div>
+    </div>
+</body>
+</html>
